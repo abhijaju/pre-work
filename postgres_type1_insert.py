@@ -14,7 +14,6 @@ TUPLE = "('%s', %s, %s)"
 
 fp = open("type1_data.csv", "r", 1)
 fp_time = open("postgres_type1_insert_query_time.csv", "w+")
-all_tuples = ""
 
 for i in range(0, config.NUM_BACKTESTS):
   all_tuples = ""
