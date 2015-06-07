@@ -11,7 +11,7 @@ for i in range(0, config.NUM_DATES):
   now = now - onedayless
 
 
-fp = open("type1_data.csv", "w+")
+fp = open("data/type1_data.csv", "w+")
 
 for i in range(0, config.NUM_BACKTESTS):
   for day in dates:

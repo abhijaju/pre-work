@@ -5,8 +5,8 @@ import time
 from datetime import datetime
 
 rdb = redis.StrictRedis('localhost')
-fp = open("type1_query.csv", "r", 1)
-fp_time = open("redis_type1_lookup_query_time.csv", "w+")
+fp = open("data/type1_query.csv", "r", 1)
+fp_time = open("data/redis_type1_lookup_query_time.csv", "w+")
 
 for i in range(0, config.NUM_QUERIES):
   print "Query Number: %d" % i

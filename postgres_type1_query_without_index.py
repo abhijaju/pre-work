@@ -8,8 +8,8 @@ cur = conn.cursor()
 
 SELECT = "SELECT * FROM type1_without_index WHERE strat_id=%s AND date_exp >= '%s' AND date_exp <= '%s'"
 
-fp = open("type1_query.csv", "r", 1)
-fp_time = open("postgres_type1_lookup_query_time_without_index.csv", "w+")
+fp = open("data/type1_query.csv", "r", 1)
+fp_time = open("data/postgres_type1_lookup_query_time_without_index.csv", "w+")
 
 for i in range(0, config.NUM_QUERIES):
   print "Query Number: %d" % i

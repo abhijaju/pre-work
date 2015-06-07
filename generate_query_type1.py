@@ -4,7 +4,7 @@ import random
 from datetime import date, timedelta
 import math
 
-fp = open("type1_query.csv", "w+")
+fp = open("data/type1_query.csv", "w+")
 
 now = date.today()
 for i in range(0, config.NUM_QUERIES):
