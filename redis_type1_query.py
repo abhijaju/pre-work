@@ -15,9 +15,9 @@ for i in range(0, config.NUM_QUERIES):
   start_date = row[1].replace("-", "")
   end_date = row[2].replace("-", "")
 
-  start = time.clock()
+  start = time.time()
   rdb.zrangebyscore(key, start_date, end_date, withscores=True)
-  time_taken = time.clock() - start
+  time_taken = time.time() - start
   fp_time.write("%f\n" % time_taken)
 
 fp.close()

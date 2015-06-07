@@ -25,10 +25,10 @@ for i in range(0, config.NUM_BACKTESTS):
       all_tuples += ", "
 
   insert_query = INSERT % all_tuples
-  start = time.clock()
+  start = time.time()
   cur.execute(insert_query)
   conn.commit()
-  time_taken = time.clock() - start
+  time_taken = time.time() - start
   fp_time.write("%f\n" % time_taken)
 
 

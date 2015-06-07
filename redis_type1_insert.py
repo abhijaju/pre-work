@@ -18,9 +18,9 @@ for i in range(0, config.NUM_BACKTESTS):
     all_tuples += (int(date), row[2])
 
   # to separate out the conversions
-  start = time.clock()
+  start = time.time()
   rdb.zadd("stratID:"+str(i), *all_tuples)
-  time_taken = time.clock() - start
+  time_taken = time.time() - start
   fp_time.write("%f\n" % time_taken)
 
 fp.close()

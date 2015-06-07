@@ -16,9 +16,9 @@ for i in range(0, config.NUM_QUERIES):
   row = fp.readline().rstrip('\n').split(',')
   lookup_query = SELECT % (row[0], row[1], row[2])
 
-  start = time.clock()
+  start = time.time()
   cur.execute(lookup_query)
-  time_taken = time.clock() - start
+  time_taken = time.time() - start
   print "Rows returned %d" % cur.rowcount
   fp_time.write("%f\n" % time_taken)
 
